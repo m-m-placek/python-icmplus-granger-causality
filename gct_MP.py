@@ -252,7 +252,7 @@ def mrdivide_real(B, A):
 
 def acf_to_var(G):
     # Calculate VAR parameters from autocovariance sequence.
-    # Equivalent to autocov_to_var (Whittle's recursive LWR algorithm) from MVGC toolbox in Matlab.
+    # Equivalent to autocov_to_var (Whittle's recursive LWR algorithm) from MVGC toolbox v1.0 in Matlab.
     G = array_like(G, None, ndim=3)
     (q1, n, n1) = G.shape  # in Matlab q1 is in the last (3rd) dimension
     if n != n1:
@@ -294,7 +294,7 @@ def acf_to_var(G):
 
 def acf_to_gc(G):
     # Calculate time-domain Granger causality from autocovariance sequence
-    # Similar to autocov_to_pwcgc from MVGC toolbox in Matlab.
+    # Similar to autocov_to_pwcgc from MVGC v1.0 toolbox in Matlab.
     G = array_like(G, None, ndim=3)
     (_, n, n1) = G.shape
     if n != n1:
